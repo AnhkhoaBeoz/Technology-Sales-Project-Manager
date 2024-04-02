@@ -1,0 +1,6 @@
+.text_hyperlink {
+    color: #000000;
+}
+.active {
+    background-color: rgba(37, 210, 86, 0.33);
+}

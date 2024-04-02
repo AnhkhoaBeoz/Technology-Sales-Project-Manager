@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/latomedium.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+
+body {
+    font-family: "Lato", sans-serif !important;
+    color: #000;
+}
