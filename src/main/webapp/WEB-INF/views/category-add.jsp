@@ -19,7 +19,7 @@
     <h1 class="text-center mt-4">LOẠI SẢN PHẨM</h1>
     <div class="row">
         <div class="col-md-6 container">
-            <form:form method="post" action="/category/save"
+            <form:form method="post" action="/admin/category/save"
                        modelAttribute="category">
                 <form:hidden path="id"/>
                 <div class="form-group m-3">

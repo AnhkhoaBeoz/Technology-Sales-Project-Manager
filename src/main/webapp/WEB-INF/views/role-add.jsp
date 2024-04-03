@@ -17,7 +17,7 @@
         <div class="alert alert-success">${message}</div>
     </c:if>
     <h1 class="text-center mt-4">Create Role</h1>
-    <form:form action="/role/save" method="POST" modelAttribute="role" class="mt-4">
+    <form:form action="/admin/role/save" method="POST" modelAttribute="role" class="mt-4">
         <div class="form-group">
             <form:label path="name">Role Name:</form:label>
             <form:input path="name" class="form-control"/>

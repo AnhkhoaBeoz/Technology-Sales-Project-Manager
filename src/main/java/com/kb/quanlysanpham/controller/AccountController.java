@@ -63,7 +63,7 @@ public class AccountController {
         }
         accountService.saveOrUpdate(account);
         redirectAttributes.addFlashAttribute("message", "Thao tác thành công");
-        return "redirect:/accounts"; // Chuyển hướng về trang danh sách tài khoản sau khi lưu thành công
+        return "redirect:/admin/accounts"; // Chuyển hướng về trang danh sách tài khoản sau khi lưu thành công
     }
 
 
@@ -71,6 +71,6 @@ public class AccountController {
     public String deleteAccount(@PathVariable Long id, RedirectAttributes redirectAttributes) {
         accountService.deleteAccount(id);
         redirectAttributes.addFlashAttribute("message", "Xóa tài khoản thành công");
-        return "redirect:/accounts";
+        return "redirect:/admin/accounts";
     }
 }

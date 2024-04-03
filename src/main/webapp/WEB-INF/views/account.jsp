@@ -16,9 +16,18 @@
     <div class="row">
         <%@ include file="menu.jsp"%>
     </div>
+    <c:if test="${not empty message}">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>${message}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </c:if>
+    <h1 class="text-center">Account Management</h1>
     <div class="container d-flex flex-row-reverse bd-highlight mb-3">
         <div class="p-2 bd-highlight">
-            <a href="${pageContext.request.contextPath}/accounts/create" class="btn btn-primary">Thêm Tài Khoản</a>
+            <a href="${pageContext.request.contextPath}/admin/accounts/create" class="btn btn-primary">Thêm Tài Khoản</a>
         </div>
     </div>
     <div class="container">
@@ -44,8 +53,8 @@
                     <td>${user.address}</td>
                     <td>${user.fullName}</td>
                     <td>${user.phone}</td>
-                    <td><a href="/accounts/edit/${user.id}" class="btn btn-primary">Sửa</a></td>
-                    <td><a href="#" onclick="confirmDelete('/accounts/delete/${user.id}')" class="btn btn-danger">Delete</a></td>
+                    <td><a href="/admin/accounts/edit/${user.id}" class="btn btn-primary">Sửa</a></td>
+                    <td><a href="#" onclick="confirmDelete('/admin/accounts/delete/${user.id}')" class="btn btn-danger">Delete</a></td>
                 </tr>
             </c:forEach>
             </tbody>

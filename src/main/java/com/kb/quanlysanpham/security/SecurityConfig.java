@@ -18,6 +18,11 @@ public class SecurityConfig {
     @Autowired
     private CustomUserDetails customUserDetails;
 
+
+    @Bean
+    public CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler() {
+        return new CustomAuthenticationSuccessHandler();
+    }
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(crsf -> crsf.disable());
@@ -36,7 +41,7 @@ public class SecurityConfig {
                 .formLogin(formLogin -> formLogin
                         .loginPage("/auth/login")
                         .loginProcessingUrl("/auth/confirmLogin")
-                        .defaultSuccessUrl("/")
+                        .successHandler(customAuthenticationSuccessHandler()) // use custom success handler
                         .failureUrl("/auth/login?error=true")
                         .permitAll()
                 );

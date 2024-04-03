@@ -24,7 +24,7 @@
             <div class="col-md-12">
                 <h1 class="text-center">Product Management</h1>
                 <hr>
-                <a href="/product/add" class="btn btn-primary">Create</a>
+                <a href="${pageContext.request.contextPath}/admin/product/add" class="btn btn-primary">Create</a>
                 <table class="table table-bordered table-striped text-center">
                     <thead>
                     <tr>
@@ -48,8 +48,8 @@
                             <td><img src="${pageContext.request.contextPath}/uploads/${product.image}"
                                      alt="${product.productName}" width="100px" height="100px"></td>
                             <td>
-                                <a href="/product/update/${product.id}" class="btn btn-warning">Edit</a>
-                                <a href="#" onclick="confirmDelete('/product/delete/${product.id}')"
+                                <a href="/admin/product/update/${product.id}" class="btn btn-warning">Edit</a>
+                                <a href="#" onclick="confirmDelete('/admin/product/delete/${product.id}')"
                                    class="btn btn-danger">Delete</a>
                             </td>
                         </tr>

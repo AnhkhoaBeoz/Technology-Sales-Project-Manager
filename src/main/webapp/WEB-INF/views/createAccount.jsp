@@ -17,8 +17,8 @@
     <c:if test="${!empty message}">
         <div class="alert alert-success">${message}</div>
     </c:if>
-    <h1 class="text-center mt-4">Create Account</h1>
-    <form:form action="/accounts/save" method="post" modelAttribute="newAccount">
+    <h1 class="text-center mt-4">Manager Account</h1>
+    <form:form action="/admin/accounts/save" method="post" modelAttribute="newAccount">
         <div class="form-group">
             <form:hidden path="id" class="form-control" id="username" name="username"/>
             <form:errors path="id" cssClass="text-danger"/>

@@ -51,14 +51,14 @@ public class CategoryController {
             categoryService.saveCategory(category);
         }
         redirectAttributes.addFlashAttribute("message", AppConstant.MESSAGE_CATEGORY_SAVED_SUCCESSFULLY);
-        return "redirect:/category";
+        return "redirect:admin/category";
     }
 
     @GetMapping("/delete/{id}")
     public String deleteCategory(@PathVariable Long id, RedirectAttributes redirectAttributes) {
         categoryService.deleteCategoryById(id);
         redirectAttributes.addFlashAttribute("message", AppConstant.MESSAGE_CATEGORY_DELETED_SUCCESSFULLY);
-        return "redirect:/category";
+        return "redirect:admin/category";
     }
 
     @GetMapping("/data")

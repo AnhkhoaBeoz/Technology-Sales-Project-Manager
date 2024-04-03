@@ -104,4 +104,13 @@ public class LoginController {
         redirectAttributes.addFlashAttribute("successMessage", AppConstant.MESSAGE_REGISTER_SUCCESS);
         return "redirect:/auth/login";
     }
+
+    @GetMapping("/logout")
+    public String logout() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null) {
+            SecurityContextHolder.getContext().setAuthentication(null);
+        }
+        return "redirect:/auth/login";
+    }
 }

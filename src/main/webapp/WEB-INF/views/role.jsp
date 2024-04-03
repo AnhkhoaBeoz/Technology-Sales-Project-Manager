@@ -14,7 +14,7 @@
         <%@ include file="menu.jsp" %>
     </div>
     <div class="container d-flex flex-row-reverse bd-highlight mb-3 mt-3">
-        <a href="${pageContext.request.contextPath}/role/add" class="btn btn-primary">Thêm mới</a>
+        <a href="${pageContext.request.contextPath}/admin/role/add" class="btn btn-primary">Thêm mới</a>
     </div>
     <div>
         <table class="table table-striped text-center container">
@@ -31,8 +31,8 @@
                     <td>${role.id}</td>
                     <td>${role.name}</td>
                     <td>
-                        <a href="/role/edit/${role.id}" class="btn btn-primary">Sửa</a>
-                        <a href="#" onclick="confirmDelete('/role/delete/${role.id}')" class="btn btn-danger">Xóa</a>
+                        <a href="/admin/role/edit/${role.id}" class="btn btn-primary">Sửa</a>
+                        <a href="#" onclick="confirmDelete('/admin/role/delete/${role.id}')" class="btn btn-danger">Xóa</a>
                     </td>
                 </tr>
             </c:forEach>

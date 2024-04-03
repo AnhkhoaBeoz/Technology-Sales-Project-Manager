@@ -59,7 +59,7 @@ public class ProductController {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
         if (fileName.contains("..")) {
             redirectAttributes.addFlashAttribute("message", "File name contains invalid path sequence " + fileName);
-            return "redirect:/product/add";
+            return "redirect:/admin/product/add";
         }
 
         // Lưu hình ảnh
@@ -71,7 +71,7 @@ public class ProductController {
                 Files.createDirectories(Paths.get(uploadDir));
             } catch (IOException e) {
                 redirectAttributes.addFlashAttribute("message", "Could not create the directory where the uploaded files will be stored.");
-                return "redirect:/product/add";
+                return "redirect:/admin/product/add";
             }
         }
 
@@ -88,13 +88,13 @@ public class ProductController {
         productService.saveProduct(product);
         redirectAttributes.addFlashAttribute("message", "Product saved successfully");
 
-        return "redirect:/product";
+        return "redirect:/admin/product";
     }
     @GetMapping("/update/{id}")
     public String showUpdateProductForm(@PathVariable("id") Long id, Model model) {
         Product product = productService.findProductById(id);
         if (product == null) {
-            return "redirect:/product";
+            return "redirect:admin/product";
         }
         model.addAttribute("product", product);
         model.addAttribute("categories", categoryService.findAll());
@@ -114,7 +114,7 @@ public class ProductController {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
         if (fileName.contains("..")) {
             redirectAttributes.addFlashAttribute("message", "File name contains invalid path sequence " + fileName);
-            return "redirect:/product/edit/" + id;
+            return "redirect:/admin/product/edit/" + id;
         }
 
         // Lưu hình ảnh
@@ -126,7 +126,7 @@ public class ProductController {
                 Files.createDirectories(Paths.get(uploadDir));
             } catch (IOException e) {
                 redirectAttributes.addFlashAttribute("message", "Could not create the directory where the uploaded files will be stored.");
-                return "redirect:/product/edit/" + id;
+                return "redirect:/admin/product/edit/" + id;
             }
         }
 
@@ -143,7 +143,7 @@ public class ProductController {
         productService.saveProduct(product);
         redirectAttributes.addFlashAttribute("message", "Product updated successfully");
 
-        return "redirect:/product";
+        return "redirect:admin/product";
     }
     // Phương thức xóa
     @GetMapping("/delete/{id}")
@@ -154,6 +154,6 @@ public class ProductController {
         }
         productService.deleteProduct(product);
         redirectAttributes.addFlashAttribute("message", "Product deleted successfully");
-        return "redirect:/product";
+        return "redirect:/admin/product";
     }
 }

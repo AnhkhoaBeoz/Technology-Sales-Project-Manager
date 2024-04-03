@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Add Product</h1>
+            <h1 class="text-center">Product Management</h1>
             <hr>
         </div>
     </div>
@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-md-12">
                 <hr>
-                <form:form action="/product/confirmAdd" method="post" modelAttribute="product" enctype="multipart/form-data">
+                <form:form action="/admin/product/confirmAdd" method="post" modelAttribute="product" enctype="multipart/form-data">
                     <div class="form-group">
                         <form:label path="productName">Product Name</form:label>
                         <form:input path="productName" type="text" class="form-control" id="productName" required="true"/>

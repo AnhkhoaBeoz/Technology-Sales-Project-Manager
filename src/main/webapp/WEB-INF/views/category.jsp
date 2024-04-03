@@ -18,7 +18,7 @@
             <div class="col-md-12">
                 <h1 class="text-center">Category Management</h1>
                 <hr>
-                <a href="/category/add" class="btn btn-primary">Create</a>
+                <a href="/admin/category/add" class="btn btn-primary">Create</a>
                 <table class="table table-bordered table-striped text-center" >
                     <thead>
                     <tr>
@@ -33,9 +33,9 @@
                             <td>${category.id}</td>
                             <td>${category.name}</td>
                             <td>
-                                <a href="/category/edit/${category.id}"
+                                <a href="/admin/category/edit/${category.id}"
                                    class="btn btn-warning">Edit</a>
-                                <a href="#" onclick="confirmDelete('/category/delete/${category.id}')   "
+                                <a href="#" onclick="confirmDelete('/admin/category/delete/${category.id}')   "
                                    class="btn btn-danger">Delete</a>
                             </td>
                         </tr>

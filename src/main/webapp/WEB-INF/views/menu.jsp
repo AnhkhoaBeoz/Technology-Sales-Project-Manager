@@ -22,19 +22,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/accounts' ? 'active' : ''}" href="/accounts">Account</a>
+                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/admin/accounts' ? 'active' : ''}" href="/admin/accounts">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/role' ? 'active' : ''}" href="/role">Role</a>
+                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/admin/role' ? 'active' : ''}" href="/admin/role">Role</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/category' ? 'active' : ''}" href="/category">Category</a>
+                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/admin/category' ? 'active' : ''}" href="/admin/category">Category</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/product' ? 'active' : ''}" href="/product">Product</a>
+                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/admin/product' ? 'active' : ''}" href="/admin/product">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/order' ? 'active' : ''}" href="/order">Order</a>
+                        <a class="nav-link text_hyperlink font-weight-bold ${pageContext.request.requestURI == '/admin/order' ? 'active' : ''}" href="/admin/order">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="/auth/logout">Logout</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
